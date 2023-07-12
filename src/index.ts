@@ -70,7 +70,7 @@ export default class JsonApiEntityGenerator<ENTITY extends Resource> {
             if (entity !== null) {
                 // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
                 const id = (entitiesChanges?.[i]?.id ?? this.entities[i]?.id ?? String(i + 1));
-                newEntities.push(this.createEntity(entitiesChanges?.[i], this.entities[i], id));
+                newEntities.push(this.createEntity(entitiesChanges?.[i], this.entities[i], id as string));
             }
         }
         return this.getJsonApiResponse(newEntities, total);
@@ -94,9 +94,9 @@ export default class JsonApiEntityGenerator<ENTITY extends Resource> {
         if (id) {
             newEntity.id = id;
         } else if (primaryEntityChanges?.id) {
-            newEntity.id = primaryEntityChanges.id;
+            newEntity.id = primaryEntityChanges.id as string;
         } else if (secondaryEntityChanges?.id) {
-            newEntity.id = secondaryEntityChanges.id;
+            newEntity.id = secondaryEntityChanges.id as string;
         }
         if (secondaryEntityChanges?.attributes) {
             for (const [key, value] of Object.entries(secondaryEntityChanges.attributes)) {
