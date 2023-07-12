@@ -1,0 +1,26 @@
+{
+  "name": "cypress-fixture-factory",
+  "version": "1.0.0",
+  "description": "Factory for easier management of fixtures for Cypress integration tests",
+  "main": ".src/index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "typescript": "4.9.4",
+    "@jaspr/client-js": "3.0.1",
+    "lodash": "4.17.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AronLisy/cypress-fixture-factory"
+  },
+  "keywords": [
+    "fixture",
+    "factory",
+    "generator",
+    "cypress"
+  ],
+  "author": "Aron Lisy",
+  "license": "ISC"
+}
